@@ -1,0 +1,835 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*--------------------- PÁGINA INDEX --------------------- */
+
+.grid-item-padre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px auto 250px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+/* -- HEADER -- */
+
+header{
+    background-color: rgb(17, 17, 17);
+    padding: 10px 25px 10px 25px;
+    font-family: 'Raleway', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    grid-area: header;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav div ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav div ul li{
+    padding: 15px;
+}
+
+header nav div ul li a {
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header nav div ul li a:hover {
+    color:#fdcf38;
+}
+
+header nav div ul li a i {
+    font-size: 20px;
+}
+
+header nav .logo {
+    margin-right: 150px;
+}
+
+/* -- MAIN -- */
+
+main {
+    grid-area: main;
+}
+
+/* principal */
+
+main .carousel-caption {
+    font-family: 'Raleway', sans-serif;
+}
+
+main .carousel-item img {
+    filter: brightness(60%);
+}
+
+
+/* quienes somos */
+
+main .quienesSomos {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+main .quienesSomos div {
+    width: 50%;
+}
+
+main .quienesSomos div h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fdcf38;
+}
+
+main .quienesSomos div p {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+main .quienesSomos img {
+    width: 550px;
+    height: 450px;
+}
+
+/* redes sociales */
+
+main .redesSociales {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/seguridadVial2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.781)), url("../img/seguridadVial2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .redesSociales .iconosRedes {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+main .redesSociales .iconosRedes a {
+    color: #ffffff;
+    font-size: 45px;
+    transition: color 0.3s;
+}
+
+main .redesSociales .iconosRedes a:hover {
+    color: #fdcf38;
+}
+
+main .redesSociales p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: rgba(240, 248, 255, 0.925);
+}
+    
+/* productos */
+
+main .seccionProductos {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main .seccionProductos h2 {
+    background-color: #fdcf38;
+    color: rgb(17, 17, 17);
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    padding: 25px 0px;
+    margin-bottom: 0px;
+}
+
+main .seccionProductos .contenedor {
+    background-color: #fdcf38;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+main .seccionProductos .contenedor div {
+    width: 430px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+main .seccionProductos .contenedor div a img {
+    width: 430px;
+    height: 380px;
+    filter: brightness(70%);
+    border-radius: 8px;
+    transition: 1s;
+}
+
+main .seccionProductos .contenedor div a img:hover {
+    transform: scale(0.95);
+}
+
+main .seccionProductos .contenedor div a h3 {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/* contratos*/
+
+main .contratos {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+main .contratos h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main .contratos div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+main .contratos div img {
+    margin: 20px;
+    transition: 0.5s;
+}
+
+main .contratos div img:hover {
+    transform: scale(1.1);
+}
+
+/* -- FOOTER -- */
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid-area: footer;
+}
+
+footer .contenedorLogo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .contenedorLogo img {
+    width: 100px;
+}
+
+footer .contenedorInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .contenedorInfo .newsletter div h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer .contenedorInfo .newsletter div h3{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+footer .contenedorInfo .newsletter .contenedorEmail {
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+    width:100%;
+    height: 28px;
+}
+
+footer .contenedorInfo .newsletter .contenedorEmail input{
+    width: 80%;
+}
+
+footer .contenedorInfo .newsletter .contenedorEmail a{
+    background-color: #fdcf38;
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer .contenedorInfo .contactanos h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer .contenedorInfo .contactanos h3{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+/* ------------------- PÁGINA PRODUCTOS ------------------- */
+
+/* -- MAIN -- */
+
+.productos {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 20% 80%;
+
+    grid-template-areas: 
+    "tituloProductos tituloProductos"
+    "categoriasProductos galeriaProductos"
+    ;
+}
+
+.productos .tituloProductos {
+    grid-area: tituloProductos;
+    background-color: #fdcf38;
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+
+.productos .tituloProductos h2 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.productos .categoriasProductos {
+    height: 400px;
+    grid-area: categoriasProductos;
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 15px;
+    margin-left: 30px;
+    padding: 25px;
+}
+
+.productos .categoriasProductos h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color:#fdcf38;
+}
+
+.productos .categoriasProductos ul {
+    list-style: none;
+}
+
+.productos .categoriasProductos ul li {
+    margin-bottom: 10px;
+}
+
+.productos .categoriasProductos ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color:rgb(141, 141, 141);
+}
+
+.productos .galeriaProductos {
+    grid-area: galeriaProductos;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.productos .galeriaProductos div {
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+}
+
+.productos .galeriaProductos div img {
+    width: 250px;
+    height: 150;
+}
+
+.productos .galeriaProductos div p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.productos .galeriaProductos div a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:10px;
+}
+
+/* ------------------- PÁGINA CONTACTO ------------------- */
+
+/* -- MAIN -- */
+
+.contacto {
+    font-family: 'Raleway', sans-serif;
+}
+
+.contacto .tituloContacto {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contacto .tituloContacto h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(32, 32, 32);
+}
+
+.contacto .tituloContacto h3 {
+    background-color: #fdcf38;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contacto .infoContacto {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contacto .infoContacto .datosContacto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contacto .infoContacto .datosContacto p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contacto .infoContacto .datosContacto h3 {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.contacto .infoContacto .formularioContacto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 500px;
+}
+
+.contacto .infoContacto .formularioContacto form div input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+}
+
+.contacto .infoContacto .formularioContacto form div textarea {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+}
+
+
+/* ------------------- PÁGINA IDENTIFICARSE -----------------------*/
+/* -- MAIN -- */
+
+.identificacion {
+    font-family: 'Raleway', sans-serif;
+    background-image:url(../img/seguridadVial2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.identificacion .contenedorIdentificacion {
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 25px;
+    padding: 50px;
+    width: 600px;
+}
+
+.identificacion .contenedorIdentificacion h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorEmail {
+    margin-bottom: 10px;
+ }
+
+.identificacion .contenedorIdentificacion .contenedorEmail label{
+   display: block;
+   font-size: 14px;
+   margin-bottom: 1px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorEmail input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 5px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorContrasena {
+    margin-bottom: 10px;
+ }
+
+.identificacion .contenedorIdentificacion .contenedorContrasena label{
+    display: block;
+    font-size: 14px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorContrasena input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 5px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorRecuerdame {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 220px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorOlvidoContra { 
+    display: inline-block;
+    font-size: 14px;
+}
+
+.identificacion .contenedorIdentificacion .contenedorOlvidoContra a { 
+    text-decoration: none;
+    color:rgb(17, 17, 17);
+}
+
+.identificacion .contenedorIdentificacion .contenedorAcceder {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(17, 17, 17);
+    border: 2px solid #fdcf38;
+    border-radius: 5px;
+    background-color: #fdcf38;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.identificacion .contenedorIdentificacion .contenedorAcceder:hover {
+    background-color: transparent;
+    color: #fdcf38;
+}
+
+.identificacion .contenedorIdentificacion .contenedorRegistro {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(17, 17, 17);
+    border: 2px solid #fdcf38;
+    border-radius: 5px;
+    background-color: #fdcf38;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.identificacion .contenedorIdentificacion .contenedorRegistro:hover {
+    background-color: transparent;
+    color: #fdcf38;
+}
+
+/* ------------------- PÁGINA REGISTRO -----------------------*/
+/* -- MAIN -- */
+
+.registro {
+    font-family: 'Raleway', sans-serif;
+    background-image:url(../img/seguridadVial2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.registro .contenedorRegistro {
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 25px;
+    padding: 50px;
+    width: 600px;
+}
+
+.registro .contenedorRegistro h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+
+.registro .contenedorRegistro form div {
+    margin-bottom: 10px;
+}
+
+.registro .contenedorRegistro form div label {
+    display: block;
+    font-size: 14px;
+}
+
+.registro .contenedorRegistro form div input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 5px;
+}
+
+.registro .contenedorRegistro form div select {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 5px;
+}
+
+.registro .contenedorRegistro form div .calle {
+    width: 60%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 5px;
+    margin-right: 15px;
+}
+
+.registro .contenedorRegistro form div .altura {
+    width: 36%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 5px;
+}
+
+.registro .contenedorRegistro a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(17, 17, 17);
+    border-radius: 5px;
+    border: 2px solid #fdcf38;
+    background-color: #fdcf38;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 20px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.registro .contenedorRegistro a:hover {
+    background-color: transparent;
+    color: #fdcf38;
+}
+
+
+/*-------------- QUERY --------------*/
+
+@media screen and (max-width:1180px) {
+
+    main .quienesSomos div {
+        margin: 0px 30px;
+    }
+
+    main .quienesSomos img {
+        margin: 0px 30px;
+        width: 450px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+    .productos {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        "tituloProductos"
+        "categoriasProductos"
+        "galeriaProductos"
+        ;
+    }
+
+    .productos .categoriasProductos {
+        height: 300px;
+        grid-area: categoriasProductos;
+        border: 1px solid rgb(187, 186, 186);
+        border-radius: 15px;
+        margin: 0px 30px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+
+    main .quienesSomos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .quienesSomos div {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    main .quienesSomos img {
+        width: 550px;
+        height: 450px;
+    }
+    
+}
+
+@media screen and (max-width:750px) {
+
+    .grid-item-padre {
+        grid-template-rows: 120px auto 250px;
+    }
+    
+    header nav div ul {
+        flex-direction: column;
+    }
+    
+    header nav div ul li{
+        padding: 5px;
+    }
+
+    header nav .logo {
+        margin-right: 20px;
+    }
+
+    main .quienesSomos img {
+        width: 400px;
+        height: 350px;
+    }
+
+    main .contratos div {
+        margin-bottom: 0px;
+    }
+
+    footer .contenedorInfo {
+        flex-direction: column;
+    }
+
+    footer .contenedorInfo div {
+        margin-bottom: 15px;
+    }
+
+    .grid-item-padre {
+        grid-template-rows: 120px auto 350px;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+
+    .identificacion .contenedorIdentificacion {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .registro .contenedorRegistro {
+        margin-left: 20px;
+        margin-right: 20px;
+    }    
+
+}
+
+@media screen and (max-width:550px) {
+
+    .contacto .infoContacto .datosContacto {
+        margin: 0px 30px;
+    }
+
+    .contacto .infoContacto .formularioContacto {
+        margin: 20px 30px;
+    }
+
+}
