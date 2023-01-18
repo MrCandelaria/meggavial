@@ -1,0 +1,553 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+/* -- HEADER -- */
+header {
+  background-color: #111111;
+  padding: 10px 25px 10px 25px;
+  font-family: "Raleway", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 3; }
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header nav div ul {
+      list-style: none;
+      display: flex; }
+      header nav div ul li {
+        padding: 15px; }
+        header nav div ul li a {
+          color: whitesmoke;
+          font-size: 14px;
+          font-weight: 300;
+          text-decoration: none;
+          transition: color 0.2s; }
+          header nav div ul li a:hover {
+            color: #fdcf38; }
+          header nav div ul li a i {
+            font-size: 20px; }
+    header nav .logo {
+      margin-right: 150px; }
+
+/*--------------------- PÁGINA INDEX --------------------- */
+/* -- MAIN -- */
+main {
+  /* principal */
+  /* quienes somos */
+  /* redes sociales */
+  /* productos */
+  /* contratos*/ }
+  main .carousel-caption {
+    font-family: "Raleway", sans-serif; }
+  main .carousel-item img {
+    filter: brightness(60%); }
+  main .quienesSomos {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    main .quienesSomos div {
+      width: 50%; }
+      main .quienesSomos div h2 {
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fdcf38; }
+      main .quienesSomos div p {
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-weight: 300; }
+    main .quienesSomos img {
+      width: 550px;
+      height: 450px; }
+  main .redesSociales {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/seguridadVial2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.781)), url("../img/seguridadVial2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main .redesSociales .iconosRedes {
+      width: 200px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5px; }
+      main .redesSociales .iconosRedes a {
+        color: #ffffff;
+        font-size: 45px;
+        transition: color 0.3s; }
+        main .redesSociales .iconosRedes a:hover {
+          color: #fdcf38; }
+    main .redesSociales p {
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      font-weight: 200;
+      color: rgba(240, 248, 255, 0.925); }
+  main .seccionProductos {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column; }
+    main .seccionProductos h2 {
+      background-color: #fdcf38;
+      color: #111111;
+      font-size: 25px;
+      font-weight: 300;
+      text-align: center;
+      padding: 25px 0px;
+      margin-bottom: 0px; }
+    main .seccionProductos .contenedor {
+      background-color: #fdcf38;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding-bottom: 20px; }
+      main .seccionProductos .contenedor div {
+        width: 430px;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+        border-radius: 8px; }
+        main .seccionProductos .contenedor div a img {
+          width: 430px;
+          height: 380px;
+          filter: brightness(70%);
+          transition: 0.6s ease-in-out; }
+          main .seccionProductos .contenedor div a img:hover {
+            transform: scale(1.1); }
+        main .seccionProductos .contenedor div a h3 {
+          position: absolute;
+          bottom: 50%;
+          width: 100%;
+          text-align: center;
+          color: whitesmoke;
+          font-size: 20px;
+          font-weight: 200; }
+  main .contratos {
+    display: flex;
+    flex-direction: column;
+    padding: 60px; }
+    main .contratos h2 {
+      font-family: "Raleway", sans-serif;
+      font-size: 25px;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 40px; }
+    main .contratos div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px; }
+      main .contratos div img {
+        margin: 20px;
+        transition: 0.5s; }
+        main .contratos div img:hover {
+          transform: scale(1.1); }
+
+/* ------------------- PÁGINA PRODUCTOS ------------------- */
+/* -- MAIN -- */
+main .productos {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "tituloProductos tituloProductos" "categoriasProductos galeriaProductos"; }
+  main .productos .tituloProductos {
+    grid-area: tituloProductos;
+    background-color: #fdcf38;
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 20px; }
+    main .productos .tituloProductos h2 {
+      font-weight: 400;
+      font-size: 20px; }
+  main .productos .categoriasProductos {
+    height: 400px;
+    grid-area: categoriasProductos;
+    border: 1px solid #bbbaba;
+    border-radius: 15px;
+    margin-left: 30px;
+    padding: 25px; }
+    main .productos .categoriasProductos h3 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #fdcf38; }
+    main .productos .categoriasProductos ul {
+      list-style: none; }
+      main .productos .categoriasProductos ul li {
+        margin-bottom: 10px; }
+        main .productos .categoriasProductos ul li a {
+          text-decoration: none;
+          font-size: 14px;
+          color: #8d8d8d; }
+  main .productos .galeriaProductos {
+    grid-area: galeriaProductos;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    main .productos .galeriaProductos div {
+      width: 250px;
+      height: 400px;
+      margin: 20px;
+      text-align: center; }
+      main .productos .galeriaProductos div img {
+        width: 250px;
+        height: 150; }
+      main .productos .galeriaProductos div p {
+        margin-top: 10px;
+        margin-bottom: 20px; }
+      main .productos .galeriaProductos div a {
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px; }
+
+/* ------------------- PÁGINA CONTACTO ------------------- */
+/* -- MAIN -- */
+main .contacto {
+  font-family: "Raleway", sans-serif; }
+  main .contacto .tituloContacto {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    main .contacto .tituloContacto h2 {
+      font-size: 25px;
+      font-weight: 500;
+      color: #202020; }
+    main .contacto .tituloContacto h3 {
+      background-color: #fdcf38;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500; }
+  main .contacto .infoContacto {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    main .contacto .infoContacto .datosContacto {
+      margin-top: 20px;
+      margin-bottom: 40px; }
+      main .contacto .infoContacto .datosContacto p {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-align: center; }
+      main .contacto .infoContacto .datosContacto h3 {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center; }
+    main .contacto .infoContacto .formularioContacto {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      width: 500px; }
+      main .contacto .infoContacto .formularioContacto form div input {
+        width: 100%;
+        height: 35px;
+        margin-bottom: 5px;
+        padding: 10px;
+        border: 1px solid #afafaf;
+        border-radius: 5px; }
+      main .contacto .infoContacto .formularioContacto form div textarea {
+        font-family: "Raleway", sans-serif;
+        width: 100%;
+        padding-left: 10px;
+        border: 1px solid #afafaf;
+        border-radius: 5px; }
+
+/* ------------------- PÁGINA IDENTIFICARSE -----------------------*/
+/* -- MAIN -- */
+main .identificacion {
+  font-family: "Raleway", sans-serif;
+  background-image: url(../img/seguridadVial2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  main .identificacion .contenedorIdentificacion {
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 25px;
+    padding: 50px;
+    width: 600px; }
+    main .identificacion .contenedorIdentificacion h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 100;
+      padding-bottom: 15px; }
+    main .identificacion .contenedorIdentificacion .contenedorEmail {
+      margin-bottom: 10px; }
+      main .identificacion .contenedorIdentificacion .contenedorEmail label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 1px; }
+      main .identificacion .contenedorIdentificacion .contenedorEmail input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+        padding-left: 5px; }
+    main .identificacion .contenedorIdentificacion .contenedorContrasena {
+      margin-bottom: 10px; }
+      main .identificacion .contenedorIdentificacion .contenedorContrasena label {
+        display: block;
+        font-size: 14px; }
+      main .identificacion .contenedorIdentificacion .contenedorContrasena input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+        padding-left: 5px; }
+    main .identificacion .contenedorIdentificacion .contenedorRecuerdame {
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 220px; }
+    main .identificacion .contenedorIdentificacion .contenedorOlvidoContra {
+      display: inline-block;
+      font-size: 14px; }
+      main .identificacion .contenedorIdentificacion .contenedorOlvidoContra a {
+        text-decoration: none;
+        color: #111111; }
+    main .identificacion .contenedorIdentificacion .contenedorAcceder {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 400;
+      color: #111111;
+      border: 2px solid #fdcf38;
+      border-radius: 5px;
+      background-color: #fdcf38;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-property: color;
+      transition-duration: 0.2s; }
+      main .identificacion .contenedorIdentificacion .contenedorAcceder:hover {
+        background-color: transparent;
+        color: #fdcf38; }
+    main .identificacion .contenedorIdentificacion .contenedorRegistro {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 400;
+      color: #111111;
+      border: 2px solid #fdcf38;
+      border-radius: 5px;
+      background-color: #fdcf38;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-property: color;
+      transition-duration: 0.2s; }
+      main .identificacion .contenedorIdentificacion .contenedorRegistro:hover {
+        background-color: transparent;
+        color: #fdcf38; }
+
+/* ------------------- PÁGINA REGISTRO -----------------------*/
+/* -- MAIN -- */
+main .registro {
+  font-family: "Raleway", sans-serif;
+  background-image: url(../img/seguridadVial2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  main .registro .contenedorRegistro {
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 25px;
+    padding: 50px;
+    width: 600px; }
+    main .registro .contenedorRegistro h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 100;
+      padding-bottom: 15px; }
+    main .registro .contenedorRegistro form div {
+      margin-bottom: 10px; }
+      main .registro .contenedorRegistro form div label {
+        display: block;
+        font-size: 14px; }
+      main .registro .contenedorRegistro form div input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        padding-left: 5px; }
+      main .registro .contenedorRegistro form div select {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        padding-left: 5px; }
+      main .registro .contenedorRegistro form div .calle {
+        width: 60%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        padding-left: 5px;
+        margin-right: 15px; }
+      main .registro .contenedorRegistro form div .altura {
+        width: 36%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        padding-left: 5px; }
+    main .registro .contenedorRegistro a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 400;
+      color: #111111;
+      border-radius: 5px;
+      border: 2px solid #fdcf38;
+      background-color: #fdcf38;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 20px;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-property: color;
+      transition-duration: 0.2s; }
+      main .registro .contenedorRegistro a:hover {
+        background-color: transparent;
+        color: #fdcf38; }
+
+/* -- FOOTER -- */
+footer {
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  footer .contenedorLogo {
+    text-align: center;
+    margin-bottom: 20px; }
+    footer .contenedorLogo img {
+      width: 100px; }
+  footer .contenedorInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+    footer .contenedorInfo .newsletter div h2 {
+      font-size: 20px;
+      font-weight: 400; }
+    footer .contenedorInfo .newsletter div h3 {
+      font-size: 15px;
+      font-weight: 100; }
+    footer .contenedorInfo .newsletter .contenedorEmail {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 28px; }
+      footer .contenedorInfo .newsletter .contenedorEmail input {
+        width: 80%; }
+      footer .contenedorInfo .newsletter .contenedorEmail a {
+        background-color: #fdcf38;
+        text-decoration: none;
+        color: #111111;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px; }
+    footer .contenedorInfo .contactanos h2 {
+      font-size: 20px;
+      font-weight: 400; }
+    footer .contenedorInfo .contactanos h3 {
+      font-size: 15px;
+      font-weight: 100; }
+
+/*-------------- QUERY --------------*/
+@media screen and (max-width: 1180px) {
+  main .quienesSomos div {
+    margin: 0px 30px; }
+  main .quienesSomos img {
+    margin: 0px 30px;
+    width: 450px;
+    height: 350px; } }
+
+@media screen and (max-width: 950px) {
+  main .productos {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "tituloProductos" "categoriasProductos" "galeriaProductos"; }
+  main .productos .categoriasProductos {
+    height: 300px;
+    grid-area: categoriasProductos;
+    border: 1px solid #bbbaba;
+    border-radius: 15px;
+    margin: 0px 30px; } }
+
+@media screen and (max-width: 850px) {
+  main .quienesSomos {
+    display: flex;
+    flex-direction: column; }
+  main .quienesSomos div {
+    width: 80%;
+    margin-bottom: 30px; }
+  main .quienesSomos img {
+    width: 550px;
+    height: 450px; } }
+
+@media screen and (max-width: 750px) {
+  header nav div ul {
+    flex-direction: column; }
+  header nav div ul li {
+    padding: 5px; }
+  header nav .logo {
+    margin-right: 20px; }
+  main .quienesSomos img {
+    width: 400px;
+    height: 350px; }
+  main .contratos div {
+    margin-bottom: 0px; }
+  footer .contenedorInfo {
+    flex-direction: column; }
+  footer .contenedorInfo div {
+    margin-bottom: 15px; } }
+
+@media screen and (max-width: 650px) {
+  main .identificacion .contenedorIdentificacion {
+    margin-left: 20px;
+    margin-right: 20px; }
+  main .registro .contenedorRegistro {
+    margin-left: 20px;
+    margin-right: 20px; } }
+
+@media screen and (max-width: 550px) {
+  main .contacto .infoContacto .datosContacto {
+    margin: 0px 30px; }
+  main .contacto .infoContacto .formularioContacto {
+    margin: 20px 30px; } }

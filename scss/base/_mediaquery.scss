@@ -1,0 +1,116 @@
+/*-------------- QUERY --------------*/
+
+@media screen and (max-width:1180px) {
+
+    main .quienesSomos div {
+        margin: 0px 30px;
+    }
+
+    main .quienesSomos img {
+        margin: 0px 30px;
+        width: 450px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+    main .productos {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        "tituloProductos"
+        "categoriasProductos"
+        "galeriaProductos"
+        ;
+    }
+
+    main .productos .categoriasProductos {
+        height: 300px;
+        grid-area: categoriasProductos;
+        border: 1px solid rgb(187, 186, 186);
+        border-radius: 15px;
+        margin: 0px 30px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+
+    main .quienesSomos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .quienesSomos div {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    main .quienesSomos img {
+        width: 550px;
+        height: 450px;
+    }
+    
+}
+
+@media screen and (max-width:750px) {
+    
+    header nav div ul {
+        flex-direction: column;
+    }
+    
+    header nav div ul li {
+        padding: 5px;
+    }
+
+    header nav .logo {
+        margin-right: 20px;
+    }
+
+    main .quienesSomos img {
+        width: 400px;
+        height: 350px;
+    }
+
+    main .contratos div {
+        margin-bottom: 0px;
+    }
+
+    footer .contenedorInfo {
+        flex-direction: column;
+    }
+
+    footer .contenedorInfo div {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+
+    main .identificacion .contenedorIdentificacion {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    main .registro .contenedorRegistro {
+        margin-left: 20px;
+        margin-right: 20px;
+    }    
+
+}
+
+@media screen and (max-width:550px) {
+
+    main .contacto .infoContacto .datosContacto {
+        margin: 0px 30px;
+    }
+
+    main .contacto .infoContacto .formularioContacto {
+        margin: 20px 30px;
+    }
+
+}

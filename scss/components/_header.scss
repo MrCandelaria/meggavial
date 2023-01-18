@@ -1,0 +1,49 @@
+/* -- HEADER -- */
+
+header {
+    background-color: nth($colores, 3);
+    padding: 10px 25px 10px 25px;
+    font-family: $fuente;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+
+            ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    padding: 15px;
+
+                    a {
+                        color: nth($colores, 5);
+                        font-size: 14px;
+                        font-weight: 300;
+                        text-decoration: none;
+                        transition: color 0.2s; 
+
+                        &:hover {
+                            color:nth($colores, 1);
+                        }
+                        
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo {
+            margin-right: 150px;
+        }
+    }
+}
+

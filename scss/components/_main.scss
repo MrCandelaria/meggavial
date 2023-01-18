@@ -1,0 +1,593 @@
+/*--------------------- PÁGINA INDEX --------------------- */
+
+/* -- MAIN -- */
+
+main {
+    
+    /* principal */
+        
+    .carousel-caption {
+        font-family: $fuente;
+    }
+
+    .carousel-item {
+        img{
+            filter: brightness(60%);
+        }
+    }
+
+    /* quienes somos */
+
+    .quienesSomos {
+        font-family: $fuente;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        div {
+            width: 50%;
+
+            h2 {
+                margin-bottom: 25px;
+                font-size: 20px;
+                font-weight: 500;
+                color: nth($colores, 1);
+            }
+
+            p {
+                margin-bottom: 10px;
+                font-size: 17px;
+                font-weight: 300;
+            }
+        }
+
+        img {
+            width: 550px;
+            height: 450px;
+        }
+    }
+
+    /* redes sociales */
+
+    .redesSociales {
+        width: 100%;
+        height: 400px;
+        background-image: url("../img/seguridadVial2.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.781)), url("../img/seguridadVial2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center ;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .iconosRedes {
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 5px;
+
+            a {
+                color: nth($colores,2);
+                font-size: 45px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: nth($colores, 1);
+                }
+            }
+        }
+
+        p {
+            font-family: $fuente;
+            font-size: 30px;
+            font-weight: 200;
+            color: rgba(240, 248, 255, 0.925);
+        }
+    }
+
+    /* productos */
+
+    .seccionProductos {
+        font-family: $fuente;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            background-color: nth($colores, 1);
+            color: nth($colores, 3);
+            font-size: 25px;
+            font-weight: 300;
+            text-align: center;
+            padding: 25px 0px;
+            margin-bottom: 0px;
+        }
+
+        .contenedor {
+            background-color: nth($colores, 1);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+
+            div {
+                width: 430px;
+                position: relative;
+                margin-bottom: 10px;
+                overflow: hidden;
+                border-radius: 8px;
+
+                a {
+                    img {
+                        width: 430px;
+                        height: 380px;
+                        filter: brightness(70%);
+                        transition: 0.6s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    h3 {
+                        position: absolute;
+                        bottom: 50%;
+                        width: 100%;
+                        text-align: center;
+                        color:nth($colores, 5);
+                        font-size: 20px;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+
+    /* contratos*/
+
+    .contratos {
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+
+        h2 {
+            font-family: $fuente;
+            font-size: 25px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+
+            img {
+                margin: 20px;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* ------------------- PÁGINA PRODUCTOS ------------------- */
+
+/* -- MAIN -- */
+
+main {
+    .productos {
+        font-family: $fuente;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 20% 80%;
+    
+        grid-template-areas: 
+        "tituloProductos tituloProductos"
+        "categoriasProductos galeriaProductos";
+
+        .tituloProductos {
+            grid-area: tituloProductos;
+            background-color: nth($colores, 1);
+            text-align: center;
+            padding: 10px 0px;
+            margin-bottom: 20px;
+
+            h2 {
+                font-weight: 400;
+                font-size: 20px; 
+            }
+        }
+
+        .categoriasProductos {
+            height: 400px;
+            grid-area: categoriasProductos;
+            border: 1px solid nth($colores, 8);
+            border-radius: 15px;
+            margin-left: 30px;
+            padding: 25px;
+
+            h3 {
+                text-align: center;
+                font-weight: 400;
+                font-size: 18px;
+                margin-bottom: 10px;
+                color: nth($colores, 1);
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        color: nth($colores, 9);
+                    }
+                }
+            }
+        }
+
+        .galeriaProductos {
+            grid-area: galeriaProductos;
+            font-family: $fuente;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            div {
+                width: 250px;
+                height: 400px;
+                margin: 20px;
+                text-align: center;
+
+                img {
+                    width: 250px;
+                    height: 150;
+                }
+
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: nth($colores, 10);
+                    border: 1px solid nth($colores, 10);
+                    border-radius: 10px;
+                    padding:10px;
+                }
+            }
+        }
+    }
+}
+
+/* ------------------- PÁGINA CONTACTO ------------------- */
+
+/* -- MAIN -- */
+
+main {
+    .contacto {
+        font-family: $fuente;
+
+        .tituloContacto {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 25px;
+                font-weight: 500;
+                color: nth($colores, 11);
+            }
+
+            h3 {
+                background-color: nth($colores, 1);
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .infoContacto {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .datosContacto {
+                margin-top: 20px;
+                margin-bottom: 40px;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 300;
+                    text-align: center;
+                }
+            }
+
+            .formularioContacto {
+                margin-top: 20px;
+                margin-bottom: 40px;
+                width: 500px;
+
+                form {
+                    div {
+                        input {
+                            width: 100%;
+                            height: 35px;
+                            margin-bottom: 5px;
+                            padding: 10px;
+                            border: 1px solid nth($colores, 4);
+                            border-radius: 5px;
+                        }
+
+                        textarea {
+                            font-family: $fuente;
+                            width: 100%;
+                            padding-left: 10px;
+                            border: 1px solid nth($colores, 4);
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------------- PÁGINA IDENTIFICARSE -----------------------*/
+
+/* -- MAIN -- */
+
+main {
+    .identificacion {
+        font-family: $fuente;
+        background-image:url(../img/seguridadVial2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center ;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .contenedorIdentificacion {
+            background-color: rgba(255, 255, 255, 0.925);
+            border-radius: 25px;
+            padding: 50px;
+            width: 600px;
+
+            h2 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 100;
+                padding-bottom: 15px;
+            }
+
+            .contenedorEmail {
+                margin-bottom: 10px;
+
+                label {
+                    display: block;
+                    font-size: 14px;
+                    margin-bottom: 1px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid nth($colores, 5);
+                    padding-left: 5px;
+                }
+            }
+
+            .contenedorContrasena {
+                margin-bottom: 10px;
+
+                label {
+                    display: block;
+                    font-size: 14px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid nth($colores, 5);
+                    padding-left: 5px;
+                }
+            }
+
+            .contenedorRecuerdame {
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 220px;
+            }
+
+            .contenedorOlvidoContra {
+                display: inline-block;
+                font-size: 14px;
+
+                a {
+                    text-decoration: none;
+                    color: nth($colores, 3);
+                }
+            }
+
+            .contenedorAcceder {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 400;
+                color: nth($colores, 3);
+                border: 2px solid nth($colores, 1);
+                border-radius: 5px;
+                background-color: nth($colores, 1);
+                padding-top: 12px;
+                padding-bottom: 12px;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                transition-property: color;
+                transition-duration: 0.2s;
+
+                &:hover {
+                    background-color: transparent;
+                    color: nth($colores, 1);
+                }
+            }
+
+            .contenedorRegistro {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 400;
+                color: nth($colores, 3);
+                border: 2px solid nth($colores, 1);
+                border-radius: 5px;
+                background-color: nth($colores, 1);
+                padding-top: 12px;
+                padding-bottom: 12px;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                transition-property: color;
+                transition-duration: 0.2s;
+
+                &:hover {
+                    background-color: transparent;
+                    color: nth($colores, 1);
+                }
+            }
+        }
+    }
+}
+
+
+/* ------------------- PÁGINA REGISTRO -----------------------*/
+
+/* -- MAIN -- */
+
+main {
+    .registro {
+        font-family: $fuente;
+        background-image:url(../img/seguridadVial2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center ;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .contenedorRegistro {
+            background-color: rgba(255, 255, 255, 0.925);
+            border-radius: 25px;
+            padding: 50px;
+            width: 600px;
+
+            h2 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 100;
+                padding-bottom: 15px;
+            }
+
+            form {
+                div {
+                    margin-bottom: 10px;
+
+                    label {
+                        display: block;
+                        font-size: 14px;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 1px solid nth($colores, 6);
+                        padding-left: 5px;
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 1px solid nth($colores, 6);
+                        padding-left: 5px;
+                    }
+
+                    .calle {
+                        width: 60%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 1px solid nth($colores, 6);
+                        padding-left: 5px;
+                        margin-right: 15px; 
+                    }
+
+                    .altura {
+                        width: 36%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 1px solid nth($colores, 6);
+                        padding-left: 5px;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 400;
+                color: nth($colores, 3);
+                border-radius: 5px;
+                border: 2px solid nth($colores, 1);
+                background-color: nth($colores, 1);
+                padding-top: 12px;
+                padding-bottom: 12px;
+                margin-top: 20px;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                transition-property: color;
+                transition-duration: 0.2s;
+
+                &:hover {
+                    background-color: transparent;
+                    color: nth($colores, 1);
+                }        
+            }
+        }
+    }
+}
+
+

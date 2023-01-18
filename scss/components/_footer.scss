@@ -1,0 +1,74 @@
+/* -- FOOTER -- */
+
+footer {
+    font-family: $fuente;
+    background-color: nth($colores, 7);
+    color: nth($colores, 5);
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .contenedorLogo {
+        text-align: center;
+        margin-bottom: 20px;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .contenedorInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .newsletter {
+            div {
+                h2 {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+                h3 {
+                    font-size: 15px;
+                    font-weight: 100;
+                }
+            }
+
+            .contenedorEmail {
+                margin-top: 10px;
+                display: flex;
+                justify-content:space-between;
+                width:100%;
+                height: 28px;
+
+                input {
+                    width: 80%;
+                }
+
+                a {
+                    background-color: nth($colores, 1);
+                    text-decoration: none;
+                    color: nth($colores, 3);
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .contactanos {
+            h2 {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            h3 {
+                font-size: 15px;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
