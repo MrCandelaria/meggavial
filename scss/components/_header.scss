@@ -24,8 +24,7 @@ header {
 
                     a {
                         color: nth($colores, 5);
-                        font-size: 14px;
-                        font-weight: 300;
+                        @include font(14px, 300);
                         text-decoration: none;
                         transition: color 0.2s; 
 
@@ -34,7 +33,7 @@ header {
                         }
                         
                         i {
-                            font-size: 20px;
+                            @include font(20px, 300);
                         }
                     }
                 }

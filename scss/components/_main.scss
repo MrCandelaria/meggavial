@@ -12,7 +12,7 @@ main {
 
     .carousel-item {
         img{
-            filter: brightness(60%);
+            filter: brightness(70%);
         }
     }
 
@@ -31,15 +31,13 @@ main {
 
             h2 {
                 margin-bottom: 25px;
-                font-size: 20px;
-                font-weight: 500;
+                @include font(20px, 500);
                 color: nth($colores, 1);
             }
 
             p {
                 margin-bottom: 10px;
-                font-size: 17px;
-                font-weight: 300;
+                @include font(17px,300);
             }
         }
 
@@ -73,7 +71,7 @@ main {
 
             a {
                 color: nth($colores,2);
-                font-size: 45px;
+                @include font(45px, 100);
                 transition: color 0.3s;
 
                 &:hover {
@@ -84,8 +82,7 @@ main {
 
         p {
             font-family: $fuente;
-            font-size: 30px;
-            font-weight: 200;
+            @include font(30px, 200);
             color: rgba(240, 248, 255, 0.925);
         }
     }
@@ -100,8 +97,7 @@ main {
         h2 {
             background-color: nth($colores, 1);
             color: nth($colores, 3);
-            font-size: 25px;
-            font-weight: 300;
+            @include font(25px, 300);
             text-align: center;
             padding: 25px 0px;
             margin-bottom: 0px;
@@ -139,8 +135,7 @@ main {
                         width: 100%;
                         text-align: center;
                         color:nth($colores, 5);
-                        font-size: 20px;
-                        font-weight: 200;
+                        @include font(20px, 300);
                     }
                 }
             }
@@ -156,8 +151,7 @@ main {
 
         h2 {
             font-family: $fuente;
-            font-size: 25px;
-            font-weight: 300;
+            @include font(25px, 300);
             text-align: center;
             margin-bottom: 40px;
         }
@@ -204,8 +198,7 @@ main {
             margin-bottom: 20px;
 
             h2 {
-                font-weight: 400;
-                font-size: 20px; 
+                @include font(20px, 400);
             }
         }
 
@@ -219,8 +212,7 @@ main {
 
             h3 {
                 text-align: center;
-                font-weight: 400;
-                font-size: 18px;
+                @include font(18px, 400);
                 margin-bottom: 10px;
                 color: nth($colores, 1);
             }
@@ -233,7 +225,7 @@ main {
 
                     a{
                         text-decoration: none;
-                        font-size: 14px;
+                        @include font(14px, 200);
                         color: nth($colores, 9);
                     }
                 }
@@ -289,8 +281,7 @@ main {
             margin-bottom: 30px;
 
             h2 {
-                font-size: 25px;
-                font-weight: 500;
+                @include font(25px, 500);
                 color: nth($colores, 11);
             }
 
@@ -299,8 +290,7 @@ main {
                 display: inline-block;
                 padding: 10px 20px;
                 border-radius: 5px;
-                font-size: 16px;
-                font-weight: 500;
+                @include font(16px, 500);
             }
         }
 
@@ -314,15 +304,13 @@ main {
                 margin-bottom: 40px;
 
                 p {
-                    font-size: 18px;
-                    font-weight: 300;
+                    @include font(18px, 300);
                     margin-bottom: 20px;
                     text-align: center;
                 }
 
                 h3 {
-                    font-size: 16px;
-                    font-weight: 300;
+                    @include font(16px, 300);
                     text-align: center;
                 }
             }
@@ -383,8 +371,7 @@ main {
 
             h2 {
                 text-align: center;
-                font-size: 30px;
-                font-weight: 100;
+                @include font(30px, 100);
                 padding-bottom: 15px;
             }
 
@@ -393,7 +380,7 @@ main {
 
                 label {
                     display: block;
-                    font-size: 14px;
+                    @include font(14px, 300);
                     margin-bottom: 1px;
                 }
 
@@ -403,6 +390,7 @@ main {
                     border-radius: 5px;
                     border: 1px solid nth($colores, 5);
                     padding-left: 5px;
+                    @include font(14px, 300);
                 }
             }
 
@@ -411,7 +399,7 @@ main {
 
                 label {
                     display: block;
-                    font-size: 14px;
+                    @include font(14px, 300);
                 }
 
                 input {
@@ -420,18 +408,19 @@ main {
                     border-radius: 5px;
                     border: 1px solid nth($colores, 5);
                     padding-left: 5px;
+                    @include font(14px, 300);
                 }
             }
 
             .contenedorRecuerdame {
                 display: inline-block;
-                font-size: 14px;
+                @include font(14px, 300);
                 margin-right: 220px;
             }
 
             .contenedorOlvidoContra {
                 display: inline-block;
-                font-size: 14px;
+                @include font(14px, 300);
 
                 a {
                     text-decoration: none;
@@ -440,48 +429,25 @@ main {
             }
 
             .contenedorAcceder {
-                display: block;
-                text-decoration: none;
-                text-align: center;
-                font-weight: 400;
-                color: nth($colores, 3);
-                border: 2px solid nth($colores, 1);
-                border-radius: 5px;
-                background-color: nth($colores, 1);
+                @extend %boton;
                 padding-top: 12px;
                 padding-bottom: 12px;
                 margin-top: 25px;
                 margin-bottom: 10px;
-                transition-property: background-color;
-                transition-duration: 0.5s;
-                transition-property: color;
-                transition-duration: 0.2s;
 
                 &:hover {
-                    background-color: transparent;
-                    color: nth($colores, 1);
+                    @extend %boton-transition;
                 }
             }
 
             .contenedorRegistro {
-                display: block;
-                text-decoration: none;
-                text-align: center;
-                font-weight: 400;
-                color: nth($colores, 3);
-                border: 2px solid nth($colores, 1);
-                border-radius: 5px;
-                background-color: nth($colores, 1);
+                @extend %boton;
                 padding-top: 12px;
                 padding-bottom: 12px;
-                transition-property: background-color;
-                transition-duration: 0.5s;
-                transition-property: color;
-                transition-duration: 0.2s;
+                
 
                 &:hover {
-                    background-color: transparent;
-                    color: nth($colores, 1);
+                    @extend %boton-transition;
                 }
             }
         }
@@ -515,8 +481,7 @@ main {
 
             h2 {
                 text-align: center;
-                font-size: 30px;
-                font-weight: 100;
+                @include font(30px, 100);
                 padding-bottom: 15px;
             }
 
@@ -526,7 +491,7 @@ main {
 
                     label {
                         display: block;
-                        font-size: 14px;
+                        @include font(14px, 300);
                     }
 
                     input {
@@ -535,6 +500,7 @@ main {
                         border-radius: 5px;
                         border: 1px solid nth($colores, 6);
                         padding-left: 5px;
+                        @include font(14px, 300);
                     }
 
                     select {
@@ -565,25 +531,13 @@ main {
             }
 
             a {
-                display: block;
-                text-decoration: none;
-                text-align: center;
-                font-weight: 400;
-                color: nth($colores, 3);
-                border-radius: 5px;
-                border: 2px solid nth($colores, 1);
-                background-color: nth($colores, 1);
+                @extend %boton;
                 padding-top: 12px;
                 padding-bottom: 12px;
                 margin-top: 20px;
-                transition-property: background-color;
-                transition-duration: 0.5s;
-                transition-property: color;
-                transition-duration: 0.2s;
-
+                
                 &:hover {
-                    background-color: transparent;
-                    color: nth($colores, 1);
+                    @extend %boton-transition;
                 }        
             }
         }

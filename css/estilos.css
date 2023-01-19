@@ -5,6 +5,24 @@
   margin: 0%;
   box-sizing: border-box; }
 
+main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identificacion .contenedorIdentificacion .contenedorRegistro, main .registro .contenedorRegistro a, footer .contenedorInfo .newsletter .contenedorEmail a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  color: #111111;
+  border-radius: 5px;
+  border: 2px solid #fdcf38;
+  background-color: #fdcf38;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-property: color;
+  transition-duration: 0.2s; }
+
+main .identificacion .contenedorIdentificacion .contenedorAcceder:hover, main .identificacion .contenedorIdentificacion .contenedorRegistro:hover, main .registro .contenedorRegistro a:hover, footer .contenedorInfo .newsletter .contenedorEmail a:hover {
+  background-color: transparent;
+  color: #fdcf38; }
+
 /* -- HEADER -- */
 header {
   background-color: #111111;
@@ -31,7 +49,8 @@ header {
           header nav div ul li a:hover {
             color: #fdcf38; }
           header nav div ul li a i {
-            font-size: 20px; }
+            font-size: 20px;
+            font-weight: 300; }
     header nav .logo {
       margin-right: 150px; }
 
@@ -46,7 +65,7 @@ main {
   main .carousel-caption {
     font-family: "Raleway", sans-serif; }
   main .carousel-item img {
-    filter: brightness(60%); }
+    filter: brightness(70%); }
   main .quienesSomos {
     font-family: "Raleway", sans-serif;
     display: flex;
@@ -89,6 +108,7 @@ main {
       main .redesSociales .iconosRedes a {
         color: #ffffff;
         font-size: 45px;
+        font-weight: 100;
         transition: color 0.3s; }
         main .redesSociales .iconosRedes a:hover {
           color: #fdcf38; }
@@ -135,7 +155,7 @@ main {
           text-align: center;
           color: whitesmoke;
           font-size: 20px;
-          font-weight: 200; }
+          font-weight: 300; }
   main .contratos {
     display: flex;
     flex-direction: column;
@@ -173,8 +193,8 @@ main .productos {
     padding: 10px 0px;
     margin-bottom: 20px; }
     main .productos .tituloProductos h2 {
-      font-weight: 400;
-      font-size: 20px; }
+      font-size: 20px;
+      font-weight: 400; }
   main .productos .categoriasProductos {
     height: 400px;
     grid-area: categoriasProductos;
@@ -184,8 +204,8 @@ main .productos {
     padding: 25px; }
     main .productos .categoriasProductos h3 {
       text-align: center;
-      font-weight: 400;
       font-size: 18px;
+      font-weight: 400;
       margin-bottom: 10px;
       color: #fdcf38; }
     main .productos .categoriasProductos ul {
@@ -195,6 +215,7 @@ main .productos {
         main .productos .categoriasProductos ul li a {
           text-decoration: none;
           font-size: 14px;
+          font-weight: 200;
           color: #8d8d8d; }
   main .productos .galeriaProductos {
     grid-area: galeriaProductos;
@@ -302,72 +323,50 @@ main .identificacion {
       main .identificacion .contenedorIdentificacion .contenedorEmail label {
         display: block;
         font-size: 14px;
+        font-weight: 300;
         margin-bottom: 1px; }
       main .identificacion .contenedorIdentificacion .contenedorEmail input {
         width: 100%;
         height: 40px;
         border-radius: 5px;
         border: 1px solid whitesmoke;
-        padding-left: 5px; }
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 300; }
     main .identificacion .contenedorIdentificacion .contenedorContrasena {
       margin-bottom: 10px; }
       main .identificacion .contenedorIdentificacion .contenedorContrasena label {
         display: block;
-        font-size: 14px; }
+        font-size: 14px;
+        font-weight: 300; }
       main .identificacion .contenedorIdentificacion .contenedorContrasena input {
         width: 100%;
         height: 40px;
         border-radius: 5px;
         border: 1px solid whitesmoke;
-        padding-left: 5px; }
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 300; }
     main .identificacion .contenedorIdentificacion .contenedorRecuerdame {
       display: inline-block;
       font-size: 14px;
+      font-weight: 300;
       margin-right: 220px; }
     main .identificacion .contenedorIdentificacion .contenedorOlvidoContra {
       display: inline-block;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: 300; }
       main .identificacion .contenedorIdentificacion .contenedorOlvidoContra a {
         text-decoration: none;
         color: #111111; }
     main .identificacion .contenedorIdentificacion .contenedorAcceder {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      font-weight: 400;
-      color: #111111;
-      border: 2px solid #fdcf38;
-      border-radius: 5px;
-      background-color: #fdcf38;
       padding-top: 12px;
       padding-bottom: 12px;
       margin-top: 25px;
-      margin-bottom: 10px;
-      transition-property: background-color;
-      transition-duration: 0.5s;
-      transition-property: color;
-      transition-duration: 0.2s; }
-      main .identificacion .contenedorIdentificacion .contenedorAcceder:hover {
-        background-color: transparent;
-        color: #fdcf38; }
+      margin-bottom: 10px; }
     main .identificacion .contenedorIdentificacion .contenedorRegistro {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      font-weight: 400;
-      color: #111111;
-      border: 2px solid #fdcf38;
-      border-radius: 5px;
-      background-color: #fdcf38;
       padding-top: 12px;
-      padding-bottom: 12px;
-      transition-property: background-color;
-      transition-duration: 0.5s;
-      transition-property: color;
-      transition-duration: 0.2s; }
-      main .identificacion .contenedorIdentificacion .contenedorRegistro:hover {
-        background-color: transparent;
-        color: #fdcf38; }
+      padding-bottom: 12px; }
 
 /* ------------------- PÁGINA REGISTRO -----------------------*/
 /* -- MAIN -- */
@@ -397,13 +396,16 @@ main .registro {
       margin-bottom: 10px; }
       main .registro .contenedorRegistro form div label {
         display: block;
-        font-size: 14px; }
+        font-size: 14px;
+        font-weight: 300; }
       main .registro .contenedorRegistro form div input {
         width: 100%;
         height: 40px;
         border-radius: 5px;
         border: 1px solid white;
-        padding-left: 5px; }
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 300; }
       main .registro .contenedorRegistro form div select {
         width: 100%;
         height: 40px;
@@ -424,24 +426,9 @@ main .registro {
         border: 1px solid white;
         padding-left: 5px; }
     main .registro .contenedorRegistro a {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      font-weight: 400;
-      color: #111111;
-      border-radius: 5px;
-      border: 2px solid #fdcf38;
-      background-color: #fdcf38;
       padding-top: 12px;
       padding-bottom: 12px;
-      margin-top: 20px;
-      transition-property: background-color;
-      transition-duration: 0.5s;
-      transition-property: color;
-      transition-duration: 0.2s; }
-      main .registro .contenedorRegistro a:hover {
-        background-color: transparent;
-        color: #fdcf38; }
+      margin-top: 20px; }
 
 /* -- FOOTER -- */
 footer {
@@ -476,10 +463,6 @@ footer {
       footer .contenedorInfo .newsletter .contenedorEmail input {
         width: 80%; }
       footer .contenedorInfo .newsletter .contenedorEmail a {
-        background-color: #fdcf38;
-        text-decoration: none;
-        color: #111111;
-        border-radius: 5px;
         padding-left: 10px;
         padding-right: 10px; }
     footer .contenedorInfo .contactanos h2 {

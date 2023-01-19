@@ -12,3 +12,28 @@ rgb(0,0,0),
 rgb(32,32,32);
 
 $fuente: 'Raleway', sans-serif;
+
+%boton {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: nth($colores, 3);
+    border-radius: 5px;
+    border: 2px solid nth($colores, 1);
+    background-color: nth($colores, 1);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+%boton-transition {
+    background-color: transparent;
+    color: nth($colores, 1);
+}
+
+@mixin font($fontSize, $fontWeight){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}

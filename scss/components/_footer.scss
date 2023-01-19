@@ -26,13 +26,11 @@ footer {
         .newsletter {
             div {
                 h2 {
-                    font-size: 20px;
-                    font-weight: 400;
+                    @include font(20px, 400);
                 }
 
                 h3 {
-                    font-size: 15px;
-                    font-weight: 100;
+                    @include font(15px, 100);
                 }
             }
 
@@ -48,25 +46,24 @@ footer {
                 }
 
                 a {
-                    background-color: nth($colores, 1);
-                    text-decoration: none;
-                    color: nth($colores, 3);
-                    border-radius: 5px;
+                    @extend %boton;
                     padding-left: 10px;
                     padding-right: 10px;
+                    
+                    &:hover {
+                        @extend %boton-transition;
+                    }
                 }
             }
         }
 
         .contactanos {
             h2 {
-                font-size: 20px;
-                font-weight: 400;
+                @include font(20px, 400);
             }
 
             h3 {
-                font-size: 15px;
-                font-weight: 100;
+                @include font(15px, 100);
             }
         }
     }
