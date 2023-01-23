@@ -47,6 +47,10 @@ header nav div ul li a:hover {
     color:#fdcf38;
 }
 
+header nav div ul li .botonProductos {
+    background-color: #fdcf38;
+}
+
 header nav div ul li a i {
     font-size: 20px;
 }

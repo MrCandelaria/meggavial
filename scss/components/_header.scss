@@ -1,47 +1,63 @@
 /* -- HEADER -- */
 
 header {
+    height: 80px;
+    padding: 0px 20px;
     background-color: nth($colores, 3);
-    padding: 10px 25px 10px 25px;
     font-family: $fuente;
     position: sticky;
     top: 0;
     z-index: 3;
 
     nav {
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        div {
+        ul {
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+            list-style: none;
+            display: flex;
+            align-items: center;
 
-            ul {
-                list-style: none;
-                display: flex;
+            li {
+                padding: 10px 15px;
 
-                li {
-                    padding: 15px;
+                a {
+                    color: nth($colores, 5);
+                    @include font(14px, 300);
+                    text-decoration: none;
+                    transition: color 0.2s;
 
-                    a {
-                        color: nth($colores, 5);
-                        @include font(14px, 300);
-                        text-decoration: none;
-                        transition: color 0.2s; 
+                    &:hover {
+                        color:nth($colores, 1);
+                    }
+                    
+                    i {
+                        padding-top: 4px;
+                        @include font(20px, 300);
+                    }
+                }
 
-                        &:hover {
-                            color:nth($colores, 1);
-                        }
-                        
-                        i {
-                            @include font(20px, 300);
-                        }
+                .botonProductos {
+                    background-color: #fdcf38;
+                    color: nth($colores, 3);
+                    padding: 4px 10px;
+                    border-radius: 5px;
+                    @extend %boton;
+
+                    &:hover {
+                        @extend %boton-transition;
                     }
                 }
             }
         }
 
         .logo {
-            margin-right: 150px;
+            margin-left: 50px;
         }
     }
 }

@@ -5,7 +5,7 @@
   margin: 0%;
   box-sizing: border-box; }
 
-main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identificacion .contenedorIdentificacion .contenedorRegistro, main .registro .contenedorRegistro a, footer .contenedorInfo .newsletter .contenedorEmail a {
+header nav ul li .botonProductos, main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identificacion .contenedorIdentificacion .contenedorRegistro, main .registro .contenedorRegistro a, footer .contenedorInfo .newsletter .contenedorEmail a {
   display: block;
   text-decoration: none;
   text-align: center;
@@ -19,40 +19,52 @@ main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identif
   transition-property: color;
   transition-duration: 0.2s; }
 
-main .identificacion .contenedorIdentificacion .contenedorAcceder:hover, main .identificacion .contenedorIdentificacion .contenedorRegistro:hover, main .registro .contenedorRegistro a:hover, footer .contenedorInfo .newsletter .contenedorEmail a:hover {
+header nav ul li .botonProductos:hover, main .identificacion .contenedorIdentificacion .contenedorAcceder:hover, main .identificacion .contenedorIdentificacion .contenedorRegistro:hover, main .registro .contenedorRegistro a:hover, footer .contenedorInfo .newsletter .contenedorEmail a:hover {
   background-color: transparent;
   color: #fdcf38; }
 
 /* -- HEADER -- */
 header {
+  height: 80px;
+  padding: 0px 20px;
   background-color: #111111;
-  padding: 10px 25px 10px 25px;
   font-family: "Raleway", sans-serif;
   position: sticky;
   top: 0;
   z-index: 3; }
   header nav {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    header nav div ul {
+    header nav ul {
+      height: 100%;
+      padding: 0%;
+      margin: 0%;
       list-style: none;
-      display: flex; }
-      header nav div ul li {
-        padding: 15px; }
-        header nav div ul li a {
+      display: flex;
+      align-items: center; }
+      header nav ul li {
+        padding: 10px 15px; }
+        header nav ul li a {
           color: whitesmoke;
           font-size: 14px;
           font-weight: 300;
           text-decoration: none;
           transition: color 0.2s; }
-          header nav div ul li a:hover {
+          header nav ul li a:hover {
             color: #fdcf38; }
-          header nav div ul li a i {
+          header nav ul li a i {
+            padding-top: 4px;
             font-size: 20px;
             font-weight: 300; }
+        header nav ul li .botonProductos {
+          background-color: #fdcf38;
+          color: #111111;
+          padding: 4px 10px;
+          border-radius: 5px; }
     header nav .logo {
-      margin-right: 150px; }
+      margin-left: 50px; }
 
 /*--------------------- PÁGINA INDEX --------------------- */
 /* -- MAIN -- */
@@ -505,12 +517,17 @@ footer {
     height: 450px; } }
 
 @media screen and (max-width: 750px) {
-  header nav div ul {
-    flex-direction: column; }
-  header nav div ul li {
-    padding: 5px; }
+  header {
+    height: 140px;
+    padding: 0px 30px; }
+  header nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+  header nav ul li {
+    padding: 5px 5px; }
   header nav .logo {
-    margin-right: 20px; }
+    margin-left: 0px; }
   main .quienesSomos img {
     width: 400px;
     height: 350px; }

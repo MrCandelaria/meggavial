@@ -58,16 +58,23 @@
 
 @media screen and (max-width:750px) {
     
-    header nav div ul {
-        flex-direction: column;
+    header {
+        height: 140px;
+        padding: 0px 30px;
     }
-    
-    header nav div ul li {
-        padding: 5px;
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        padding: 5px 5px;
     }
 
     header nav .logo {
-        margin-right: 20px;
+        margin-left: 0px;
     }
 
     main .quienesSomos img {
