@@ -3,15 +3,15 @@
 /* -- MAIN -- */
 
 main {
-    
+
     /* principal */
-        
+
     .carousel-caption {
         font-family: $fuente;
     }
 
     .carousel-item {
-        img{
+        img {
             filter: brightness(70%);
         }
     }
@@ -37,7 +37,7 @@ main {
 
             p {
                 margin-bottom: 10px;
-                @include font(17px,300);
+                @include font(17px, 300);
             }
         }
 
@@ -53,10 +53,10 @@ main {
         width: 100%;
         height: 400px;
         background-image: url("../img/seguridadVial2.jpg");
-        background: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.781)), url("../img/seguridadVial2.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.781)), url("../img/seguridadVial2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center ;
+        background-position: center;
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
@@ -70,7 +70,7 @@ main {
             margin-bottom: 5px;
 
             a {
-                color: nth($colores,2);
+                color: nth($colores, 2);
                 @include font(45px, 100);
                 transition: color 0.3s;
 
@@ -134,7 +134,7 @@ main {
                         bottom: 50%;
                         width: 100%;
                         text-align: center;
-                        color:nth($colores, 5);
+                        color: nth($colores, 5);
                         @include font(20px, 300);
                     }
                 }
@@ -181,89 +181,117 @@ main {
 
 main {
     .productos {
+        background-color: nth($colores,  11);
+        padding-top: 30px;
+        padding-bottom: 30px;
         font-family: $fuente;
         display: grid;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto;
         grid-template-columns: 20% 80%;
-    
-        grid-template-areas: 
-        "tituloProductos tituloProductos"
-        "categoriasProductos galeriaProductos";
-
-        .tituloProductos {
-            grid-area: tituloProductos;
-            background-color: nth($colores, 1);
-            text-align: center;
-            padding: 10px 0px;
-            margin-bottom: 20px;
-
-            h2 {
-                @include font(20px, 400);
-            }
-        }
+        grid-template-areas:
+            "categoriasProductos galeriaProductos";
 
         .categoriasProductos {
-            height: 400px;
-            grid-area: categoriasProductos;
-            border: 1px solid nth($colores, 8);
-            border-radius: 15px;
-            margin-left: 30px;
-            padding: 25px;
+            font-family: $fuente;
+            width: 200px;
+            margin: 30px 35px;
 
             h3 {
-                text-align: center;
-                @include font(18px, 400);
-                margin-bottom: 10px;
-                color: nth($colores, 1);
+                color: nth($colores, 3);
+                @include font (18px, 500);
+                text-align: center; 
             }
 
             ul {
+                text-align: left;
                 list-style: none;
+                margin: 0%;
+                padding: 0%;
 
                 li {
                     margin-bottom: 10px;
 
-                    a{
+                    a {
                         text-decoration: none;
-                        @include font(14px, 200);
                         color: nth($colores, 9);
+                        transition: 2s;
+                        @include font (15px, 300);
+
+                        &:hover {
+                            text-decoration-line:underline; 
+                        }
                     }
                 }
             }
         }
 
         .galeriaProductos {
-            grid-area: galeriaProductos;
-            font-family: $fuente;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
+            align-items: center;
             flex-wrap: wrap;
+            grid-area: galeriaProductos;
 
-            div {
-                width: 250px;
-                height: 400px;
+            .card {
                 margin: 20px;
+                padding: 12px 12px; 
+                width: 300px;
+                height: auto;
                 text-align: center;
+                border-radius: 10px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                transition: 0.5s;
+                transition-timing-function: ease-out;
 
-                img {
-                    width: 250px;
-                    height: 150;
+                &:hover {
+                    transform: scale(1.03);
                 }
 
-                p {
-                    margin-top: 10px;
-                    margin-bottom: 20px;
+                img {
+                    border-radius: 10px;
+                    box-shadow: 0px 3px 8px -1px rgba(73, 73, 73, 0.42);
+                    -webkit-box-shadow: 0px 3px 8px -1px rgba(73, 73, 73, 0.42);
+                    -moz-box-shadow: 0px 3px 8px -1px rgba(73, 73, 73, 0.42);
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    bottom: 25px;
+                }
+
+                .nombreProd {
+                    @include font (20px, 400);
+                    margin-bottom: 12px;
+                    color: nth($colores, 1);
+                }
+
+                .descripcionProd {
+                    @include font (13px, 300);
+                    margin-bottom: 12px;
+                    color: nth($colores,10);
+                }
+
+                .precioProd {
+                    @include font (16px, 500);
+                    color: nth($colores, 10);
+                    display: inline;
                 }
 
                 a {
-                    text-decoration: none;
-                    color: nth($colores, 10);
-                    border: 1px solid nth($colores, 10);
-                    border-radius: 10px;
-                    padding:10px;
+
+                    i {
+                        font-size: 25px;
+                        color: nth($colores, 10);
+
+                        &:active {
+                            color: nth($colores, 1);
+                        }
+                    }
                 }
             }
         }
+
     }
 }
 
@@ -282,7 +310,7 @@ main {
 
             h2 {
                 @include font(25px, 500);
-                color: nth($colores, 11);
+                color: nth($colores, 10);
             }
 
             h3 {
@@ -352,10 +380,10 @@ main {
 main {
     .identificacion {
         font-family: $fuente;
-        background-image:url(../img/seguridadVial2.jpg);
+        background-image: url(../img/seguridadVial2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center ;
+        background-position: center;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -444,7 +472,7 @@ main {
                 @extend %boton;
                 padding-top: 12px;
                 padding-bottom: 12px;
-                
+
 
                 &:hover {
                     @extend %boton-transition;
@@ -462,10 +490,10 @@ main {
 main {
     .registro {
         font-family: $fuente;
-        background-image:url(../img/seguridadVial2.jpg);
+        background-image: url(../img/seguridadVial2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center ;
+        background-position: center;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
@@ -517,7 +545,7 @@ main {
                         border-radius: 5px;
                         border: 1px solid nth($colores, 6);
                         padding-left: 5px;
-                        margin-right: 15px; 
+                        margin-right: 15px;
                     }
 
                     .altura {
@@ -535,13 +563,11 @@ main {
                 padding-top: 12px;
                 padding-bottom: 12px;
                 margin-top: 20px;
-                
+
                 &:hover {
                     @extend %boton-transition;
-                }        
+                }
             }
         }
     }
 }
-
-

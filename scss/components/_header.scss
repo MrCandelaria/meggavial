@@ -43,7 +43,7 @@ header {
                 }
 
                 .botonProductos {
-                    background-color: #fdcf38;
+                    background-color: nth($colores, 1);
                     color: nth($colores, 3);
                     padding: 4px 10px;
                     border-radius: 5px;
