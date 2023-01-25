@@ -262,7 +262,7 @@ main {
 
                 .nombreProd {
                     @include font (20px, 400);
-                    margin-bottom: 12px;
+                    margin-bottom: 10px;
                     color: nth($colores, 1);
                 }
 
@@ -309,7 +309,7 @@ main {
             margin-bottom: 30px;
 
             h2 {
-                @include font(25px, 500);
+                @include font(20px, 500);
                 color: nth($colores, 10);
             }
 
@@ -318,6 +318,9 @@ main {
                 display: inline-block;
                 padding: 10px 20px;
                 border-radius: 5px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
                 @include font(16px, 500);
             }
         }
@@ -328,24 +331,44 @@ main {
             flex-wrap: wrap;
 
             .datosContacto {
-                margin-top: 20px;
+                margin-top: 40px;
                 margin-bottom: 40px;
 
-                p {
+                .textoCont {
                     @include font(18px, 300);
                     margin-bottom: 20px;
                     text-align: center;
                 }
 
-                h3 {
-                    @include font(16px, 300);
-                    text-align: center;
+                .cont {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 6px;
+
+                    i {
+                        @include font(20px, 100);
+                        color: nth($colores, 1);
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        margin-bottom: 0%;
+                    }
+
                 }
+
             }
 
             .formularioContacto {
+                border: 1px nth($colores, 4) solid;
+                border-radius: 10px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
                 margin-top: 20px;
                 margin-bottom: 40px;
+                padding: 25px;
                 width: 500px;
 
                 form {
@@ -368,6 +391,20 @@ main {
                         }
                     }
                 }
+
+                a {
+                    @extend %boton;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                    -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                    -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+
+                    &:hover {
+                        @extend %boton-transition;
+                    }
+                }
+
             }
         }
     }
@@ -381,6 +418,7 @@ main {
     .identificacion {
         font-family: $fuente;
         background-image: url(../img/seguridadVial2.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.200), rgba(0, 0, 0, 0.200)), url("../img/seguridadVial2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -392,7 +430,7 @@ main {
         padding-bottom: 100px;
 
         .contenedorIdentificacion {
-            background-color: rgba(255, 255, 255, 0.925);
+            background-color: rgba(255, 255, 255, 0.863);
             border-radius: 25px;
             padding: 50px;
             width: 600px;
@@ -441,13 +479,13 @@ main {
             }
 
             .contenedorRecuerdame {
-                display: inline-block;
+                display: inline;
                 @include font(14px, 300);
                 margin-right: 220px;
             }
 
             .contenedorOlvidoContra {
-                display: inline-block;
+                display: inline;
                 @include font(14px, 300);
 
                 a {
@@ -462,6 +500,9 @@ main {
                 padding-bottom: 12px;
                 margin-top: 25px;
                 margin-bottom: 10px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
 
                 &:hover {
                     @extend %boton-transition;
@@ -472,6 +513,9 @@ main {
                 @extend %boton;
                 padding-top: 12px;
                 padding-bottom: 12px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
 
 
                 &:hover {
@@ -491,6 +535,7 @@ main {
     .registro {
         font-family: $fuente;
         background-image: url(../img/seguridadVial2.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.200), rgba(0, 0, 0, 0.200)), url("../img/seguridadVial2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -502,7 +547,7 @@ main {
         padding-bottom: 100px;
 
         .contenedorRegistro {
-            background-color: rgba(255, 255, 255, 0.925);
+            background-color: rgba(255, 255, 255, 0.863);
             border-radius: 25px;
             padding: 50px;
             width: 600px;
@@ -563,6 +608,9 @@ main {
                 padding-top: 12px;
                 padding-bottom: 12px;
                 margin-top: 20px;
+                box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+                -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
 
                 &:hover {
                     @extend %boton-transition;

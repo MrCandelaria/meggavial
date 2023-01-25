@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -38,26 +39,42 @@
 
     <main>
         <section class="contacto">
-
-            <div class="tituloContacto">
-                <h2>Contacta con Nosotros</h2>
+            
+            <!------------------------------->
+            <div class="tituloContacto" data-aos="fade-down">
+                <h2>CONTACTA CON NOSOTROS</h2>
                 <h3>Queremos escucharte</h3>
             </div>
 
+            <!------------------------------->
             <div class="infoContacto">
-                <div class="datosContacto">
 
-                    <p>Si quieres información sobre cualquiera de nuestros productos <br>
+                <!---->
+                <div class="datosContacto" data-aos="fade-right">
+                    <p class="textoCont">Si quieres información sobre cualquiera de nuestros productos <br>
                         o estás interesado en su distribución, rellena nuestro formulario <br>
-                        y nos pondremos en contacto contigo lo antes posible. <br>
-                        Muchas gracias.</p>
-    
-                    <h3>Teléfono: 3517583725</h3>
-                    <h3>Email: meggavial@gmail.com</h3>
-                    <h3>Instagram: meggavial</h3>
+                        y nos pondremos en contacto con vos lo antes posible. <br>
+                        Muchas gracias.
+                    </p>
+                    
+                    <div class="cont">
+                        <i class='bx bxs-phone'></i>
+                        <p>Teléfono: 3517583725</h3>
+                    </div>
+
+                    <div class="cont">
+                        <i class='bx bx-envelope'></i>
+                        <p>Email: meggavial@gmail.com</h3>
+                    </div>
+
+                    <div class="cont">
+                        <i class='bx bxl-instagram' ></i>
+                        <p>Instagram: @meggavial</h3>
+                    </div>
                 </div>
-        
-                <div class="formularioContacto">
+                
+                <!---->
+                <div class="formularioContacto" data-aos="fade-left">
                     <form action="" method="" enctype="">
                         <div>
                             <input type="text" id="nombre" placeholder="Nombre completo">
@@ -72,6 +89,7 @@
                             <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Escribe un Comentario"></textarea>
                         </div>
                     </form>
+                    <a href="">Enviar</a>
                 </div>
             </div>
 
@@ -103,6 +121,12 @@
         </div>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

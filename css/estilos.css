@@ -5,7 +5,7 @@
   margin: 0%;
   box-sizing: border-box; }
 
-header nav ul li .botonProductos, main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identificacion .contenedorIdentificacion .contenedorRegistro, main .registro .contenedorRegistro a, footer .contenedorInfo .newsletter .contenedorEmail a {
+header nav ul li .botonProductos, main .contacto .infoContacto .formularioContacto a, main .identificacion .contenedorIdentificacion .contenedorAcceder, main .identificacion .contenedorIdentificacion .contenedorRegistro, main .registro .contenedorRegistro a, footer .contenedorInfo .newsletter .contenedorEmail a {
   display: block;
   text-decoration: none;
   text-align: center;
@@ -19,7 +19,7 @@ header nav ul li .botonProductos, main .identificacion .contenedorIdentificacion
   transition-property: color;
   transition-duration: 0.2s; }
 
-header nav ul li .botonProductos:hover, main .identificacion .contenedorIdentificacion .contenedorAcceder:hover, main .identificacion .contenedorIdentificacion .contenedorRegistro:hover, main .registro .contenedorRegistro a:hover, footer .contenedorInfo .newsletter .contenedorEmail a:hover {
+header nav ul li .botonProductos:hover, main .contacto .infoContacto .formularioContacto a:hover, main .identificacion .contenedorIdentificacion .contenedorAcceder:hover, main .identificacion .contenedorIdentificacion .contenedorRegistro:hover, main .registro .contenedorRegistro a:hover, footer .contenedorInfo .newsletter .contenedorEmail a:hover {
   background-color: transparent;
   color: #fdcf38; }
 
@@ -257,7 +257,7 @@ main .productos {
       main .productos .galeriaProductos .card .nombreProd {
         font-size: 20px;
         font-weight: 400;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         color: #fdcf38; }
       main .productos .galeriaProductos .card .descripcionProd {
         font-size: 13px;
@@ -284,7 +284,7 @@ main .contacto {
     margin-top: 30px;
     margin-bottom: 30px; }
     main .contacto .tituloContacto h2 {
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 500;
       color: #3f3f3f; }
     main .contacto .tituloContacto h3 {
@@ -292,6 +292,9 @@ main .contacto {
       display: inline-block;
       padding: 10px 20px;
       border-radius: 5px;
+      box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
       font-size: 16px;
       font-weight: 500; }
   main .contacto .infoContacto {
@@ -299,20 +302,34 @@ main .contacto {
     justify-content: space-evenly;
     flex-wrap: wrap; }
     main .contacto .infoContacto .datosContacto {
-      margin-top: 20px;
+      margin-top: 40px;
       margin-bottom: 40px; }
-      main .contacto .infoContacto .datosContacto p {
+      main .contacto .infoContacto .datosContacto .textoCont {
         font-size: 18px;
         font-weight: 300;
         margin-bottom: 20px;
         text-align: center; }
-      main .contacto .infoContacto .datosContacto h3 {
-        font-size: 16px;
-        font-weight: 300;
-        text-align: center; }
+      main .contacto .infoContacto .datosContacto .cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6px; }
+        main .contacto .infoContacto .datosContacto .cont i {
+          font-size: 20px;
+          font-weight: 100;
+          color: #fdcf38;
+          margin-right: 10px; }
+        main .contacto .infoContacto .datosContacto .cont p {
+          margin-bottom: 0%; }
     main .contacto .infoContacto .formularioContacto {
+      border: 1px #afafaf solid;
+      border-radius: 10px;
+      box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
       margin-top: 20px;
       margin-bottom: 40px;
+      padding: 25px;
       width: 500px; }
       main .contacto .infoContacto .formularioContacto form div input {
         width: 100%;
@@ -327,12 +344,19 @@ main .contacto {
         padding-left: 10px;
         border: 1px solid #afafaf;
         border-radius: 5px; }
+      main .contacto .infoContacto .formularioContacto a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42); }
 
 /* ------------------- PÁGINA IDENTIFICARSE -----------------------*/
 /* -- MAIN -- */
 main .identificacion {
   font-family: "Raleway", sans-serif;
   background-image: url(../img/seguridadVial2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/seguridadVial2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -343,7 +367,7 @@ main .identificacion {
   padding-top: 100px;
   padding-bottom: 100px; }
   main .identificacion .contenedorIdentificacion {
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: rgba(255, 255, 255, 0.863);
     border-radius: 25px;
     padding: 50px;
     width: 600px; }
@@ -382,12 +406,12 @@ main .identificacion {
         font-size: 14px;
         font-weight: 300; }
     main .identificacion .contenedorIdentificacion .contenedorRecuerdame {
-      display: inline-block;
+      display: inline;
       font-size: 14px;
       font-weight: 300;
       margin-right: 220px; }
     main .identificacion .contenedorIdentificacion .contenedorOlvidoContra {
-      display: inline-block;
+      display: inline;
       font-size: 14px;
       font-weight: 300; }
       main .identificacion .contenedorIdentificacion .contenedorOlvidoContra a {
@@ -397,16 +421,23 @@ main .identificacion {
       padding-top: 12px;
       padding-bottom: 12px;
       margin-top: 25px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42); }
     main .identificacion .contenedorIdentificacion .contenedorRegistro {
       padding-top: 12px;
-      padding-bottom: 12px; }
+      padding-bottom: 12px;
+      box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42); }
 
 /* ------------------- PÁGINA REGISTRO -----------------------*/
 /* -- MAIN -- */
 main .registro {
   font-family: "Raleway", sans-serif;
   background-image: url(../img/seguridadVial2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/seguridadVial2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -417,7 +448,7 @@ main .registro {
   padding-top: 100px;
   padding-bottom: 100px; }
   main .registro .contenedorRegistro {
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: rgba(255, 255, 255, 0.863);
     border-radius: 25px;
     padding: 50px;
     width: 600px; }
@@ -462,7 +493,10 @@ main .registro {
     main .registro .contenedorRegistro a {
       padding-top: 12px;
       padding-bottom: 12px;
-      margin-top: 20px; }
+      margin-top: 20px;
+      box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -webkit-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42);
+      -moz-box-shadow: 0px 0px 8px -1px rgba(73, 73, 73, 0.42); }
 
 /* -- FOOTER -- */
 footer {
@@ -564,15 +598,29 @@ footer {
     margin-bottom: 15px; } }
 
 @media screen and (max-width: 650px) {
+  main .registro .contenedorRegistro {
+    margin-left: 20px;
+    margin-right: 20px; }
   main .identificacion .contenedorIdentificacion {
     margin-left: 20px;
     margin-right: 20px; }
-  main .registro .contenedorRegistro {
-    margin-left: 20px;
-    margin-right: 20px; } }
+  main .identificacion .contenedorIdentificacion .contenedorRecuerdame {
+    display: block;
+    margin-right: 0%; } }
 
 @media screen and (max-width: 550px) {
   main .contacto .infoContacto .datosContacto {
     margin: 0px 30px; }
   main .contacto .infoContacto .formularioContacto {
     margin: 20px 30px; } }
+
+@media screen and (max-width: 450px) {
+  main .quienesSomos img {
+    width: 300px;
+    height: 240px; }
+  main .seccionProductos .contenedor {
+    padding-left: 20px;
+    padding-right: 20px; }
+  footer {
+    padding-left: 25px;
+    padding-right: 25px; } }

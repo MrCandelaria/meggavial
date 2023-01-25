@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilos.css">
@@ -49,16 +50,16 @@
                 <div class="carousel-item active">
                     <img src="./img/carrusel1.jpg" class="d-block w-100" alt="Carretera">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="fs-3">Seguridad y Señalización Vial</h1>
-                        <p>Conocé todos nuestros productos.</p>
+                        <h1 class="fs-3" data-aos="fade-down">Seguridad y Señalización Vial</h1>
+                        <p data-aos="fade-up">Conocé todos nuestros productos.</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <img src="./img/carrusel4.jpg" class="d-block w-100" alt="Carretera">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="fs-3">Seguridad y Señalización Vial</h2>
-                        <p>Conocé todos nuestros productos.</p>
+                        <h2 class="fs-3" data-aos="fade-down">Seguridad y Señalización Vial</h2>
+                        <p data-aos="fade-up">Conocé todos nuestros productos.</p>
                     </div>
                 </div>
                 
@@ -78,7 +79,7 @@
 
         <!-- quienes somos -->
         <section class="quienesSomos">
-            <div>
+            <div data-aos="fade-right">
                 <h2>¿QUIENES SOMOS?</h2>
                 <p> Somos una empresa dedicada a la seguridad y señalización vial, para el desarrollo y prevención
                     del transito en zonas urbanas.</p>
@@ -88,7 +89,7 @@
                     ordenamiento y organización del transito, realizadas con láminas reflectivas marca Avery
                     Dennison de alta reflectividad.</p>
             </div>
-            <img src="./img/seguridadVial6.jpg" alt="Ruta, Seguridad Vial">
+            <img src="./img/seguridadVial6.jpg" alt="Ruta, Seguridad Vial" data-aos="fade-left">
         </section>
 
         <!-- redes sociales -->
@@ -105,37 +106,37 @@
         <section class="seccionProductos">
             <h2>NUESTROS PRODUCTOS</h2>
             <div class="contenedor">
-                <div>
+                <div data-aos="fade-up-right">
                     <a href="">
                         <img src="./img/cono.jpg" alt="Conos Viales">
                         <h3>Conos Viales</h3>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <a href="">
                         <img src="./img/lomo.jpg" alt="Reductores de Velocidad y Lomos de Burro">
                         <h3>Reductores de Velocidad y Lomos de Burro</h3>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up-left">
                     <a href="">
                         <img src="./img/tacha.jpg" alt="Tachas Viales">
                         <h3>Tachas Viales</h3>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up-right">
                     <a href="">
                         <img src="./img/divisores.jpg" alt="Divisores y Topes">
                         <h3>Divisores y Topes</h3>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <a href="">
                         <img src="./img/delineadores.jpg" alt="Delineadores">
                         <h3>Delineadores</h3>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up-left">
                     <a href="">
                         <img src="./img/accesorios.jpg" alt="Accesorios">
                         <h3>Accesorios</h3>
@@ -182,6 +183,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
