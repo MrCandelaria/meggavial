@@ -4,7 +4,7 @@
 
 main {
 
-    /* principal */
+    /* carrusel de imágenes - bootstrap */
 
     .carousel-caption {
         font-family: $fuente;
@@ -191,6 +191,7 @@ main {
         grid-template-areas:
             "categoriasProductos galeriaProductos";
 
+        /* categorias productos */
         .categoriasProductos {
             font-family: $fuente;
             width: 200px;
@@ -225,6 +226,7 @@ main {
             }
         }
 
+        /* galeria productos */
         .galeriaProductos {
             display: flex;
             justify-content: space-around;
@@ -300,9 +302,11 @@ main {
 /* -- MAIN -- */
 
 main {
+
     .contacto {
         font-family: $fuente;
 
+        /* titulo página contacto */
         .tituloContacto {
             text-align: center;
             margin-top: 30px;
@@ -325,11 +329,13 @@ main {
             }
         }
 
+        /* contenedor información contacto */
         .infoContacto {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
 
+            /* datos para contacto */
             .datosContacto {
                 margin-top: 40px;
                 margin-bottom: 40px;
@@ -360,6 +366,7 @@ main {
 
             }
 
+            /* formulario para contacto */
             .formularioContacto {
                 border: 1px nth($colores, 4) solid;
                 border-radius: 10px;
@@ -415,6 +422,7 @@ main {
 /* -- MAIN -- */
 
 main {
+
     .identificacion {
         font-family: $fuente;
         background-image: url(../img/seguridadVial2.jpg);
@@ -429,6 +437,7 @@ main {
         padding-top: 100px;
         padding-bottom: 100px;
 
+        /* contenedor identificacion */
         .contenedorIdentificacion {
             background-color: rgba(255, 255, 255, 0.863);
             border-radius: 25px;
@@ -546,6 +555,7 @@ main {
         padding-top: 100px;
         padding-bottom: 100px;
 
+        /* contenedor registro */
         .contenedorRegistro {
             background-color: rgba(255, 255, 255, 0.863);
             border-radius: 25px;
